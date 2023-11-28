@@ -1,84 +1,42 @@
 import java.util.Scanner;
 
 public class Maximum {
-    public static Integer FindMax(Integer x,Integer y,Integer z){
+    public static <E extends Comparable> void  FindMax(E x,E y,E z){
 
-        Integer max=(x.compareTo(y)>0)?x:y;
-        return (max.compareTo(z)>0)?max:z;
+       E max=(x.compareTo(y)>0)?x:y;
+        E max1=(max.compareTo(z)>0)?max:z;
+        System.out.println(max1);
     }
 
-    public static float FindMax(Float x,Float y,Float z){
 
-        Float max=(x.compareTo(y)>0)?x:y;
-        return (max.compareTo(z)>0)?max:z;
-    }
-
-    public static String FindMax(String x,String y,String z){
-
-        String  max=(x.compareTo(y)>0)?x:y;
-        return (max.compareTo(z)>0)?max:z;
-    }
     public static void main(String[] args){
         Scanner sc=new Scanner(System.in);
 
         System.out.println("Integer Values");
 
-        /*
-        Test Case 1: Max at 1st position
-         */
-        Integer max1=FindMax(30,20,10);
-        System.out.println("TestCase1:Max at 1st position:Max value "+max1);
+        Integer x1=10;
+        Integer y1=20;
+        Integer z1=30;
+        Float x2=45.5f;
+        Float y2=40.5f;
+        Float z2=41.5f;
+        String x3="hello";
+        String y3="world";
+        String z3="hi";
+        
+        System.out.println("Integer values");
 
-        /*
-        Test Case 2: Max at 2st position
-         */
-        Integer max2=FindMax(20,70,10);
-        System.out.println("TestCase2:Max at 2st position:Max value "+max2);
-
-        /*
-        Test Case 3: Max at 3rd position
-         */
-        Integer max3=FindMax(30,20,45);
-        System.out.println("TestCase1:Max at 3st position:Max value "+max3);
+        Maximum.FindMax(x1,y1,z1);
 
         System.out.println("Float values");
 
-        /*
-        Test Case 1: Max at 1st position
-         */
-        Float max1_float=FindMax(30.6f,20.3f,10.1f);
-        System.out.println("TestCase1:Max at 1st position:Max value "+max1_float);
+        Maximum.FindMax(x2,y2,z2);
 
-        /*
-        Test Case 2: Max at 2st position
-         */
-        Float max2_float=FindMax(20.6f,70.5f,10.1f);
-        System.out.println("TestCase2:Max at 2st position:Max value "+max2_float);
+        System.out.println("String values");
 
-        /*
-        Test Case 3: Max at 3rd position
-         */
-        Float max3_float=FindMax(30.7f,20.1f,45.13f);
-        System.out.println("TestCase1:Max at 3st position:Max value "+max3_float);
+        Maximum.FindMax(x3,y3,z3);
 
-        System.out.println("String value");
 
-        /*
-        Test Case 1: Max at 1st position
-         */
-        String max1_string=FindMax("Peach","Apple","Banana");
-        System.out.println("TestCase1:Max at 1st position:Max value "+max1_string);
 
-        /*
-        Test Case 2: Max at 2st position
-         */
-        String max2_string=FindMax("Red","Yellow","Blue");
-        System.out.println("TestCase2:Max at 2st position:Max value "+max2_string);
-
-        /*
-        Test Case 3: Max at 3rd position
-         */
-        String max3_string=FindMax("hello","hi","world");
-        System.out.println("TestCase1:Max at 3st position:Max value "+max3_string);
     }
 }
