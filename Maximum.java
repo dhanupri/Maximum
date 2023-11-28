@@ -14,27 +14,64 @@ public class Maximum {
 
         System.out.println("Integer Values");
 
-        Integer x1=10;
-        Integer y1=20;
-        Integer z1=30;
-        Float x2=45.5f;
-        Float y2=40.5f;
-        Float z2=41.5f;
-        String x3="hello";
-        String y3="world";
-        String z3="hi";
-        
-        System.out.println("Integer values");
+       
+         /*
+        Test Case 1: Max at 1st position
+         */
+        Maximum.FindMax(30,20,10);
+        System.out.println("TestCase1:Max at 1st position:Max value ");
 
-        Maximum.FindMax(x1,y1,z1);
+        /*
+        Test Case 2: Max at 2st position
+         */
+        Maximum.FindMax(20,70,10);
+        System.out.println("TestCase2:Max at 2st position:Max value ");
+
+        /*
+        Test Case 3: Max at 3rd position
+         */
+        Maximum.FindMax(30,20,45);
+        System.out.println("TestCase1:Max at 3st position:Max value ");
 
         System.out.println("Float values");
 
-        Maximum.FindMax(x2,y2,z2);
+        /*
+        Test Case 1: Max at 1st position
+         */
+        Maximum.FindMax(30.6f,20.3f,10.1f);
+        System.out.println("TestCase1:Max at 1st position:Max value ");
 
-        System.out.println("String values");
+        /*
+        Test Case 2: Max at 2st position
+         */
+       Maximum.FindMax(20.6f,70.5f,10.1f);
+        System.out.println("TestCase2:Max at 2st position:Max value ");
 
-        Maximum.FindMax(x3,y3,z3);
+        /*
+        Test Case 3: Max at 3rd position
+         */
+       Maximum.FindMax(30.7f,20.1f,45.13f);
+        System.out.println("TestCase1:Max at 3st position:Max value ");
+
+        System.out.println("String value");
+
+        /*
+        Test Case 1: Max at 1st position
+         */
+        Maximum.FindMax("Peach","Apple","Banana");
+        System.out.println("TestCase1:Max at 1st position:Max value ");
+
+        /*
+        Test Case 2: Max at 2st position
+         */
+        Maximum.FindMax("Red","Yellow","Blue");
+        System.out.println("TestCase2:Max at 2st position:Max value ");
+
+        /*
+        Test Case 3: Max at 3rd position
+         */
+       Maximum.FindMax("hello","hi","world");
+        System.out.println("TestCase1:Max at 3st position:Max value ");
 
 
 
